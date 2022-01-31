@@ -1,0 +1,25 @@
+<div id="player"></div>
+<script src="https://preview.threekit.com/app/js/threekit-player.js"></script>
+<script>
+     window
+      .threekitPlayer({
+        authToken: "01234567-89ab-cdef-0123-456789abcdef",
+        el: document.getElementById("player"),
+        stageId: '27b9cd7e-2bb2-4a18-b788-160743eb4b33',
+        assetId: "e12a45f7-8b39-cd06-e12a-45f78b39cd06",
+        initialConfiguration: {
+         'Attribute Name': {
+            assetId: '4a9f7980-78a4-4ace-8cda-f2799936c4dc',
+            configuration: { 'key' : 'value'}
+          }},
+        showConfigurator: true,
+        showAR: true,
+        cache: {
+          maxAge: 500,
+          scope: "v1.0"
+        }
+      })
+      .then(function(player) {
+        window.player = player;
+      });
+</script>
